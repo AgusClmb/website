@@ -195,7 +195,7 @@ body {
     justify-content: center;
 }
 .div-elegir2 {
-    background-color: #ffffff10;
+    background-color: #0000004d;
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     border-radius: 20px;
@@ -228,25 +228,21 @@ body {
     font-style: italic;
     background-color: #080808;
 }
-.muestra h2 {
+.hacer {
+    background-color: #4b0d15;
+    margin-top: 20px;
+    padding: 10px;
+}
+.hacer h2 {
     color: #ededed;
     font-size: 20px;
     text-align: center;
-    margin-top: 20px;
 }
-.muestra p {
+.hacer p {
     color: #ededed;
     font-size: 17px;
     margin-top: 20px;
     text-align: center;
-    background-color: #4b0d15;
-    padding: 10px;
-}
-.muestra h3 {
-    color: #ededed;
-    font-size: 20px;
-    text-align: center;
-    padding-top: 20px;
 }
 .boton-pag {
     width: auto;
@@ -260,6 +256,36 @@ body {
     color: #ededed;
     text-decoration: none;
     cursor: pointer;
+}
+/*---------- Explicacion ----------*/
+.expli {
+    margin: 40px 0 20px 0;
+}
+.expli h2{
+    color: #ededed;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+.expli span {
+    color: #c2293b;
+}
+.grid-expl {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 10px;
+}
+.div-html-css {
+    padding: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 12px;
+}
+.div-html-css:nth-child(odd) {
+    background-color: #4b0d15;
+    color: #ededed;
+}
+.div-html-css:nth-child(even) {
+    background-color: #202020;
+    color: #ededed;
 }
 
 /*---------- @Media ----------*/
@@ -336,6 +362,11 @@ body {
         margin: 3vh;
         padding: 3vh;
     }
+    /*Explicacion*/
+    .div-html-css {
+        padding: 15px;
+        font-size: 15px;
+    }
 } 
 @media screen and (min-width: 400px) {
     /*Sobre Mi*/
@@ -372,21 +403,29 @@ body {
         font-size: 20px;
     }
     /*Muestra*/
-    .muestra h2 {
-    font-size: 28px;
+    .hacer {
+        padding: 15px;
     }
-    .muestra p {
-    font-size: 22px;
-    margin-top: 25px;
+    .hacer h2 {
+        font-size: 28px;
     }
-    .muestra h3 {
-    font-size: 27px;
-    margin-top: 25px;
+    .hacer p {
+        font-size: 22px;
+        margin-top: 25px;
     }
     .boton-pag {
-    font-size: 28px;
-    margin-top: 28px;
-    padding: 15px;
+        font-size: 28px;
+        margin-top: 28px;
+        padding: 15px;
+    }
+    /*Explicacion*/
+    .div-html-css {
+        padding: 15px;
+        font-size: 18px;
+    }
+    .expli h2{
+        margin: 0 10px;
+        font-size: 25px;
     }
 }
 @media screen and (min-width: 450px) {
@@ -474,22 +513,27 @@ body {
     }
     /*Muestra*/
     .muestra {
-    margin: 45px;
+        margin: 45px;
     }
-    .muestra h2 {
-    font-size: 33px;
+    .hacer h2 {
+        font-size: 33px;
     }
-    .muestra p {
-    font-size: 25px;
-    margin-top: 25px;
-    }
-    .muestra h3 {
-    font-size: 33px;
-    margin-top: 30px;
+    .hacer p {
+        font-size: 28px;
+        margin-top: 25px;
     }
     .boton-pag {
-    font-size: 30px;
-    margin-top: 20px;
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    /*Explicacion*/
+    .div-html-css {
+        padding: 15px;
+        font-size: 25px;
+    }
+    .expli h2{
+        margin: 0 10px;
+        font-size: 33px;
     }
 }
 
@@ -544,9 +588,17 @@ body {
     .redes-container ul li {
         width: 10vh;
     }
+    /*Explicacion*/
+    .grid-expl {
+        gap: 15px;
+    }
 }
 
 @media screen and (min-width: 900px) {
+    /*Sobre mi*/
+    .sobre-mi-txt p{
+        font-size: 2.5vh;
+    }
     /*Elegir*/
     .elegir {
         height: 60vh;
@@ -563,27 +615,28 @@ body {
         justify-content: center;
     }
     .redes-container ul li {
-        width: 120px;
+        width: 100px;
         padding: 0 2px;
     }
     .redes-container ul li a {
-        line-height: 100px;
-        font-size: 50px;
+        line-height: 80px;
+        font-size: 40px;
     }
     .redes-container ul li a:hover {
         transform: translateY(-3px) scale(1.05);
         box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
         filter: none;
     }
-        /*Muestra*/
-    .muestra h2 {
+    /*Muestra*/
+    .hacer h2 {
     font-size: 35px;
     }
-    .muestra p {
-    font-size: 25px;
+    /*Explicacion*/
+    .div-html-css {
+        font-size: 30px;
     }
-    .muestra h3 {
-    font-size: 35px;
+    .grid-expl {
+        gap: 20px;
     }
 }
 
@@ -659,11 +712,11 @@ body {
     .redes-container ul li {
         width: 15vh;
     }
-        /*Muestra*/
+    /*Muestra*/
     .muestra {
         margin: 100px;
     }
-    .muestra p {
+    .hacer p {
         font-size: 28px;
     }
 }
@@ -708,5 +761,19 @@ body {
     .redes-container ul li a {
         line-height: 60px;
         font-size: 30px;
+    }
+    /*Muestra*/
+    .muestra {
+        margin: 80px;
+    }
+    .hacer {
+        padding: 20px;
+    }
+    /*Explicacion*/
+    .expli h2{
+        font-size: 40px;
+    }
+    .div-html-css {
+        font-size: 27px;
     }
 }

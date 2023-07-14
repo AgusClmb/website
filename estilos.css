@@ -1,0 +1,712 @@
+* {
+    margin: 0;
+    top: 0;
+}
+:root {
+    --facebook: #3b5999;
+    --instagram: #e4405f;
+    --twitter: #55acee;
+    --pinterest: #bd081c;
+    --linkedin: #0077b5;
+}
+body {
+    background-color: #080808;
+    height: auto;
+    padding-bottom: 10vh;
+}
+
+/*---------- Título ----------*/
+.titulo-div{
+    width: 100%;
+    height: 35vh;
+    position: relative;
+    background-image: linear-gradient(to top, #080808 0%, #ffffff00, #ffffff00 100%),linear-gradient(to left, #080808ad 0%, #ffffff00 100%),url(img2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.titulo-div img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.divtxt{
+    color: #ededed;
+    position: absolute;
+    top: 60%;
+    left: 40%;
+}
+.divtxt p{
+    font-size: 4vh;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/*---------- Flecha de deslizar ----------*/
+.scroll-down-icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+}
+.scroll-down-icon span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid #ededed;
+    border-right: 2px solid #ededed;
+    transform: rotate(45deg);
+    animation: scrollAnimation 1.5s infinite;
+}
+@keyframes scrollAnimation {
+    0% {
+    opacity: 1;
+    transform: rotate(45deg) translate(-50%, -50%);
+    }
+    50% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-50%, -50%) translateY(8px);
+    }
+    100% {
+    opacity: 1;
+    transform: rotate(45deg) translate(-50%, -50%);
+    }
+}
+
+/*---------- Sobre Mi ----------*/
+.sobre-mi-div1{
+    width: 100%;
+    background-color: #080808;
+    padding: 2vh 0;
+}
+.sobre-mi-caja{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+.sobre-mi-caja img{
+    width: 100%;
+    height: 20vh;
+    filter: blur(2px) brightness(80%);
+    object-fit: cover;
+}
+.ftautor{
+    position: absolute;
+    margin-top: 45vh;
+    margin-left: 50%;
+}
+.ftautor img{
+    border-radius: 50%;
+}
+.sobre-mi-caja h2 {
+    font-size: 5vh;
+    color: #ededed;
+    font-family: 'Playfair Display', serif;
+    margin: 10vh 5vh 0 5vh;
+}
+.sobre-mi-caja p {
+    color: #ededed;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 3vh;
+    margin: 0 5vh;
+}
+.sobre-mi-caja span {
+    color: #c2293b;
+}
+
+/*---------- Iconos Redes ----------*/
+.redes-container {
+    display: flex;
+    margin-top: 3vh;
+    margin-bottom: 10vh;
+}
+.redes-container ul li {
+    display: inline-block;
+    margin-left: 5px;
+    width: 38px;
+    height: 18px;
+    text-align: center;
+}
+.redes-container ul li a {
+    display: block;
+    padding: 0 10px;
+    background: #333;
+    color: #ededed;
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0px #08080836;
+    transition: .2s;
+    border-radius: 7px;
+}
+.redes-container ul li a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px #0808086e;
+    filter: none;
+}
+.redes-container ul:hover a {
+    filter: blur(2px);
+}
+.redes-container ul li .facebook {
+    background: var(--facebook);
+}
+.redes-container ul li .instagram {
+    background: -webkit-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -webkit-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: -moz-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -moz-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: -ms-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -ms-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: -o-radial-gradient(32% 106%, circle cover, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), -o-linear-gradient(-45deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+    background: radial-gradient(circle farthest-corner at 32% 106%, rgb(255, 225, 125) 0%, rgb(255, 205, 105) 10%, rgb(250, 145, 55) 28%, rgb(235, 65, 65) 42%, transparent 82%), linear-gradient(135deg, rgb(35, 75, 215) 12%, rgb(195, 60, 190) 58%);
+}
+.redes-container ul li .twitter {
+    background: var(--twitter);
+}
+.redes-container ul li .pinterest {
+    background: var(--pinterest);
+}
+.redes-container ul li .linkedin {
+    background: var(--linkedin);
+}
+
+/*---------- Imagen pantallas ----------*/
+.img-pc {
+    display: flex;
+    width: 23vh;
+    height: 23vh;
+    position: absolute;
+    margin-top: 185vh;
+    margin-left: 0%;
+}
+
+/*---------- Elegir ----------*/
+.elegir {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: url(elegir-fondo.jpg) center fixed;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.div-elegir2 {
+    background-color: #ffffff10;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    margin: 5vh;
+    padding: 3vh;
+}
+.elegir h2 {
+    color: #c2293b;
+    font-size: 4vh;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+}
+.elegir p {
+    color: #ededed;
+    padding-top: 2vh;
+    font-size: 3vh;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+}
+.elegir span {
+    color: #c2293b;
+}
+
+/*---------- Muestra ----------*/
+.muestra {
+    display: grid;
+    place-items: center;
+    margin: 25px;
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+    background-color: #080808;
+}
+.muestra h2 {
+    color: #ededed;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+.muestra p {
+    color: #ededed;
+    font-size: 17px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #4b0d15;
+    padding: 10px;
+}
+.muestra h3 {
+    color: #ededed;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+.boton-pag {
+    width: auto;
+    font-size: 25px;
+    background-color: #4b0d15;
+    border: none;
+    margin-top: 20px;
+    padding: 10px;
+}
+.boton-pag a {
+    color: #ededed;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*---------- @Media ----------*/
+@media screen and (min-width: 320px){
+    /*Sobre Mi*/
+    .sobre-mi-caja img{
+        height: 24vh;
+    }
+    .ftautor{
+        margin-top: 50vh;
+    }
+    .ftautor img{
+        width: 20vh;
+    }
+    /*Elegir*/
+    .elegir h2 {
+        font-size: 3vh;
+    }
+    .elegir p {
+        padding-top: 1vh;
+        font-size: 3vh;
+    }
+    .div-elegir2 {
+        margin: 2vh;
+        padding: 2vh;
+    }
+}
+@media screen and (min-width: 350px) {
+    /*Sobre Mi*/
+    .sobre-mi-caja h2 {
+        margin: 8vh 5vh 0 5vh;
+    }
+    .ftautor{
+        position: absolute;
+        margin-top: 49vh;
+    }
+    .ftautor img{
+        width: 20vh;
+    }
+    /*Redes*/
+    .redes-container ul li a {
+        font-size: 20px;
+    }
+    .redes-container ul li {
+        width: 45px;
+        height: 45px;
+    }
+} 
+
+@media screen and (min-width: 380px) {
+    /*Sobre Mi*/
+    .sobre-mi-caja img{
+        height: 18vh;
+    }
+    .ftautor{
+        position: absolute;
+        margin-top: 45vh;
+    }
+    .ftautor img{
+        border-radius: 50%;
+        width: 18vh;
+    }
+    .divtxt h1{
+        font-size: 4vh;
+    }
+    /*Elegir*/
+    .elegir h2 {
+        font-size: 3.3vh;
+    }
+    .elegir p {
+        font-size: 2.5vh;
+    }
+    .div-elegir2 {
+        margin: 3vh;
+        padding: 3vh;
+    }
+} 
+@media screen and (min-width: 400px) {
+    /*Sobre Mi*/
+    .sobre-mi-caja img{
+        height: 20vh;
+    }
+    .ftautor{
+        margin-top: 48vh;
+        margin-left: 52%;
+    }
+    .ftautor img{
+        width: 16vh;
+    }
+    /*Elegir*/
+    .elegir {
+        height: 70vh;
+    }
+    .div-elegir2 {
+        margin: 3vh;
+        padding: 3vh;
+    }
+    .elegir h2 {
+        font-size: 3vh;
+    }
+    .elegir p {
+        font-size: 2.4vh;
+    }
+    /*Redes*/
+    .redes-container ul li {
+        width: 50px;
+        height: 50px;
+    }
+    .redes-container ul li a {
+        font-size: 20px;
+    }
+    /*Muestra*/
+    .muestra h2 {
+    font-size: 28px;
+    }
+    .muestra p {
+    font-size: 22px;
+    margin-top: 25px;
+    }
+    .muestra h3 {
+    font-size: 27px;
+    margin-top: 25px;
+    }
+    .boton-pag {
+    font-size: 28px;
+    margin-top: 28px;
+    padding: 15px;
+    }
+}
+@media screen and (min-width: 450px) {
+    /*Sobre Mi*/
+    .ftautor{
+        position: absolute;
+        margin-top: 45vh;
+    }
+    .ftautor img{
+        border-radius: 50%;
+        width: 23vh;
+    }
+    /*Elegir*/
+    .elegir {
+        height: 70vh;
+    }
+    .div-elegir2 {
+        margin: 3vh;
+        padding: 3vh;
+    }
+    .elegir h2 {
+        font-size: 5vh;
+    }
+    .elegir p {
+        font-size: 2.5vh;
+    }
+    /*Redes*/
+    .redes-container ul li {
+        width: 50px;
+        height: 75px;
+    }
+    .redes-container ul li a {
+        font-size: 25px;
+    }
+} 
+@media screen and (min-width: 500px) {
+    /*Titulo*/
+    .titulo-div img{
+        max-width: 100%;
+        height: 50vh;
+    }
+    .divtxt h1{
+        font-size: 7vh;
+    }
+}
+@media screen and (min-width: 700px) { 
+    /*Titulo*/ 
+    .titulo-div img{
+        max-width: 100%;
+        height: 50vh;
+    }
+    .divtxt h1{
+        font-size: 6vh;
+    }
+    /*Sobre Mi*/
+    .sobre-mi-caja img{
+        height: 30vh;
+    }
+    .ftautor{
+        margin-top: 54vh;
+        margin-left: 58%;
+    }
+    /*Elegir*/
+    .elegir {
+        height: 70vh;
+    }
+    .div-elegir2 {
+        margin: 3vh;
+        padding: 3vh;
+        
+    }
+    .elegir h2 {
+        font-size: 5vh;
+    }
+    .elegir p {
+        font-size: 3vh;
+    }
+    /*Redes*/
+    .redes-container ul li {
+        width: 50px;
+        height: 75px;
+    }
+    .redes-container ul li a {
+        font-size: 25px;
+    }
+    /*Muestra*/
+    .muestra {
+    margin: 45px;
+    }
+    .muestra h2 {
+    font-size: 33px;
+    }
+    .muestra p {
+    font-size: 25px;
+    margin-top: 25px;
+    }
+    .muestra h3 {
+    font-size: 33px;
+    margin-top: 30px;
+    }
+    .boton-pag {
+    font-size: 30px;
+    margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    /*Titulo*/
+    .titulo-div img{
+        width: 80vh;
+        height: 40vh;
+    }
+    .divtxt{
+        top: 70%;
+        left: 40%;
+    }
+    .divtxt p{
+        font-size: 3vh;
+    } 
+    /*Sobre Mi*/
+    .sobre-mi-caja img{
+        width: 100%;
+        height: 30vh;
+    }
+    .sobre-mi-div1{
+        width: auto;
+    }
+    .ftautor{
+        margin-top: 55vh;
+        margin-left: 58%;
+    }
+    .ftautor img{
+        width: 20vh;
+    }
+    .sobre-mi-txt{
+        margin-top: 0;
+    }
+    .sobre-mi-txt h1 {
+        font-size: 4vh;
+    }
+    .sobre-mi-txt p{
+        font-size: 3vh;
+    }
+    /*Elegir*/
+    .elegir {
+        height: 60vh;
+    }
+    .elegir h2 {
+        font-size: 5vh;
+    }
+    .elegir p {
+        font-size: 2.5vh;
+    }
+    /*Redes*/
+    .redes-container ul li {
+        width: 10vh;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    /*Elegir*/
+    .elegir {
+        height: 60vh;
+    }
+    .elegir h2 {
+        font-size: 4.5vh;
+    }
+    .elegir p {
+        font-size: 2.5vh;
+    }
+    /*Redes*/
+    .redes-container {
+        align-items: center;
+        justify-content: center;
+    }
+    .redes-container ul li {
+        width: 120px;
+        padding: 0 2px;
+    }
+    .redes-container ul li a {
+        line-height: 100px;
+        font-size: 50px;
+    }
+    .redes-container ul li a:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
+        filter: none;
+    }
+        /*Muestra*/
+    .muestra h2 {
+    font-size: 35px;
+    }
+    .muestra p {
+    font-size: 25px;
+    }
+    .muestra h3 {
+    font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    /*Titulo*/
+    .titulo-div {
+        height: 60vh;
+    }
+    .titulo-div img{
+        display: flex;
+        width: 160vh;
+        height: 70vh;
+    }
+    .divtxt{
+        top: 70%;
+        left: 46%;
+    }
+    .divtxt p{
+        font-size: 5vh;
+    } 
+    /*Sobre Mi*/
+    .sobre-mi-div1{
+        padding: 5vh;
+    }
+    .sobre-mi-caja {
+        display: grid;
+        grid-template-columns: 60vh 100vh;
+    }
+    .sobre-mi-caja img{
+        width: 60vh;
+        height: 120vh;
+    }
+    .sobre-mi-txt {
+        padding: 2vh;
+    }
+    .sobre-mi-txt h2 {
+        padding-top: 25vh;
+        font-size: 8vh;
+    }
+    .sobre-mi-txt p{
+        font-size: 5vh;
+        padding-top: 1vh;
+    }
+    .ftautor{
+        margin-top: 70vh;
+        margin-left: 60%;
+    }
+    .ftautor img{
+        width: 30vh;
+    }
+    /*Elegir*/
+    .elegir {
+        height: 70vh;
+    }
+    .div-elegir2 {
+        margin: 3vh;
+        padding: 3vh;
+    }
+    .elegir h2 {
+        font-size: 6vh;
+    }
+    .elegir p {
+        font-size: 4vh;
+    }
+    /*Redes*/
+    .redes-container {
+        margin-top: 5vh;
+    }
+    .redes-container ul li a {
+        line-height: 50px;
+        font-size: 22px;
+    }
+    .redes-container ul li {
+        width: 15vh;
+    }
+        /*Muestra*/
+    .muestra {
+        margin: 100px;
+    }
+    .muestra p {
+        font-size: 28px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    /*Titulo*/
+    .titulo-div{
+        height: 85vh;
+    }
+    .divtxt h1{
+        font-size: 14vh;
+    } 
+    /*Sobre Mi*/
+    .sobre-mi-txt {
+        padding-top: 5vh;
+    }
+    .sobre-mi-txt h2 {
+        font-size: 8vh;
+        padding-top: 35vh;
+    }
+    .sobre-mi-txt p{
+        font-size: 4vh;
+    }
+    .sobre-mi-caja {
+        grid-template-columns: 70vh 80vh;
+    }
+    .sobre-mi-caja img{
+        height: 135vh;
+        width: 100%;
+    }
+    .ftautor{
+        margin-top: 95vh;
+        margin-left: 50%;
+    }
+    .ftautor img{
+        width: 40vh;
+    }
+    /*Redes*/
+    .redes-container ul li {
+        margin-left: 5px;
+        width: 12vh;
+    }
+    .redes-container ul li a {
+        line-height: 60px;
+        font-size: 30px;
+    }
+}
